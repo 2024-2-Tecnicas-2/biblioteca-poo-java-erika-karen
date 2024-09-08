@@ -1,26 +1,36 @@
 package com.mycompany.biblioteca.java;
 
 public class Publicacion {
+    String Titulo;
+    int anoPublicacion;
 
-    private String titulo;
-    private int añoPublicacion;
+    public Publicacion(String Titulo, int anoPublicacion) {
+        this.Titulo = Titulo;
+        this.anoPublicacion = anoPublicacion;
+    }
 
-    public Publicacion(String titulo, int anioPublicacion) {
-        this.titulo = titulo;
-        this.añoPublicacion = añoPublicacion;
+    public Publicacion() {
     }
 
     public String getTitulo() {
-        return titulo;
+        return Titulo;
     }
 
-    public int getAnioPublicacion() {
-        return añoPublicacion;
+    public void setTitulo(String Titulo) {
+        this.Titulo = Titulo;
     }
 
-    public void mostrarInfo() {
-        System.out.println("Título: " + titulo);
-        System.out.println("Año de publicación: " + añoPublicacion);
+    public int getAnoPublicacion() {
+        return anoPublicacion;
     }
+
+    public void setAnoPublicacion(int anoPublicacion) {
+        this.anoPublicacion = anoPublicacion;
+    }
+    
+    @Override
+    public String toString() {
+        return "Publicacion{" + "Titulo=" + Titulo + ", anoPublicacion=" + anoPublicacion + '}';
+    }
+    
 }
-
